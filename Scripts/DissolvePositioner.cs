@@ -9,7 +9,9 @@ public class DissolvePositioner : MonoBehaviour
     public float distance;
     public bool isReady;
     public Vector3 OffSet;
-
+    /// <summary>
+    /// Call "calculateDistance" function with parameter.
+    /// </summary>
     private void Update()
     {
         if (isReady)
@@ -17,6 +19,11 @@ public class DissolvePositioner : MonoBehaviour
         else
             return;
     }
+    /// <summary>
+    /// Calculate distance between targetObject and sourceObject.
+    /// Set material properties use distance value.
+    /// </summary>
+    /// <param name="target"></param>
     public void calculateDistance(Transform target)
     {
         if (targetObject.GetComponent<MeshRenderer>().material == null)
